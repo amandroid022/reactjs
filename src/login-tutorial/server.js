@@ -13,7 +13,6 @@ const app = express();
 // d1 = "2021-06-01T19:51:04.823Z"
 // //d2 = "2021-06-01T19:52:04.823Z"
 
-
 // if(Date.parse(d1) < Date.parse(d2)){
 //     console.log("in if");
 //  }else{
@@ -28,7 +27,7 @@ app.use(cors());
 app.use("/login", (req, res) => {
   let token = false;
   if (req.body.username === "admin" && req.body.password === "pwd") {
-    token = new Date ();
+    token = new Date();
   }
 
   res.send({
